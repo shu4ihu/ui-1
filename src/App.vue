@@ -1,11 +1,12 @@
 <script setup>
-import my from './components/my.vue'
 </script>
 
 <template>
-  <div>
-    <my></my>
-  </div>
+  <RouterLink to="/">test</RouterLink>
+  <br>
+  <RouterLink to="/test2">test2</RouterLink>
+  <hr>
+  <router-view />
 </template>
 
 <style scoped>
