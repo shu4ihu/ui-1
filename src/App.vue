@@ -2,10 +2,6 @@
 </script>
 
 <template>
-  <RouterLink to="/">test</RouterLink>
-  <br>
-  <RouterLink to="/test2">test2</RouterLink>
-  <hr>
   <router-view />
 </template>
 
