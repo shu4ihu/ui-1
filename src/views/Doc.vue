@@ -2,7 +2,7 @@
     <div>
         <Topnav/>
         <div class="content">
-            <aside>
+            <aside v-if="asideVisible">
                 <h2>组件列表</h2>
                 <ol>
                     <li>
@@ -17,19 +17,54 @@
                     <li>
                         <router-link to="/doc/tabs">Tabs 组件</router-link>
                     </li>
+                    <li>
+                        <router-link to="/doc/tabs">Tabs 组件</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/doc/tabs">Tabs 组件</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/doc/tabs">Tabs 组件</router-link>
+                    </li>
                 </ol>
             </aside>
-            <main>主内容</main>
+            <main></main>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { inject ,Ref} from 'vue';
 import Topnav from '../components/Topnav.vue'
+const asideVisible = inject<Ref<boolean>>('asideVisible')
 </script>
 
 <style lang="scss" scoped>
 .content{
-    padding-top: 80px;
+    aside{
+        width: 260px;
+        height: auto;
+        padding: 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border-right: 1px solid #e8e8e8;
+        margin-top: 75px;
+        padding-bottom: 32px;
+        box-shadow: 5px 0 5px rgb(51 51 51 / 10%);
+        h2{
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        ol{
+            li{
+                padding: 4px 0;
+                font-size: 14px;
+            }
+        }
+    }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="top_nav">
-        <a href="#/" class="logo">
-            <div class="pic">UI</div>
+        <a class="logo">
+            <div class="pic" @click="toggleMenu">UI</div>
         </a>
         <ul class="menu">
             <li>
@@ -58,3 +58,11 @@
     }
 }
 </style>
+
+<script lang="ts" setup>
+import { inject, Ref } from 'vue';
+const asideVisible = inject<Ref<boolean>>('asideVisible')
+const toggleMenu =() =>{
+    asideVisible!.value = !asideVisible!.value
+}
+</script>

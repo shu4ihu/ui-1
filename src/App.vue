@@ -1,4 +1,8 @@
 <script setup>
+import { ref, provide } from 'vue';
+
+const asideVisible = ref(false)
+provide('asideVisible',asideVisible)
 </script>
 
 <template>
