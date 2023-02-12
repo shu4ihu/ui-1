@@ -2,8 +2,12 @@
     <div>
         <Topnav/>
         <section class="content">
-            <router-link to="#">Home</router-link>
-            <router-link to="doc">Doc</router-link>
+            <h1>My UI</h1>
+            <h1>一个自用的UI框架</h1>
+            <p class="action">
+                <a href="#">GitHub</a>
+                <a href="#">开始</a>
+            </p>
         </section>
     </div>
 </template>
@@ -15,5 +19,25 @@ import Topnav from "../components/Topnav.vue"
 <style lang="scss" scoped>
 .content{
     padding-top: 80px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightblue;
+    .action{
+        padding: 8px 0;
+        a{
+            margin: 0 8px;
+            background-color: #fff;
+            display: inline-block;
+            $h:28px;
+            height:$h;
+            line-height: $h;
+            border-radius: $h/2;
+            padding: 0 8px;
+        }
+    }
 }
 </style>
