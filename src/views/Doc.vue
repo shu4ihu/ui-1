@@ -43,6 +43,9 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
 
 <style lang="scss" scoped>
 .content{
+    display: flex;
+    flex: 1;
+    margin-top: 75px;
     aside{
         width: 260px;
         height: auto;
@@ -50,7 +53,6 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
         overflow-x: hidden;
         overflow-y: scroll;
         border-right: 1px solid #e8e8e8;
-        margin-top: 75px;
         padding-bottom: 32px;
         box-shadow: 5px 0 5px rgb(51 51 51 / 10%);
         h2{
@@ -63,6 +65,12 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
                 font-size: 14px;
             }
         }
+    }
+    main{
+        width: 100%;
+        height: 100%;
+        background-color: antiquewhite;
+        padding: 16px;
     }
     @media (max-width: 500px) {
         position: fixed;

@@ -1,5 +1,17 @@
 <template>
     <div>
         switch文档
+        <br>
+        switch文档
+        <br>
+        switch文档
+        <br>
+        switch文档
+        <br>
+        switch文档
+        <br>
+        switch文档
+        switch文档
+        switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档switch文档
     </div>
 </template>
