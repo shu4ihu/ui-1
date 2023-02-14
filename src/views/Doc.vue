@@ -17,15 +17,6 @@
                     <li>
                         <router-link to="/doc/tabs">Tabs 组件</router-link>
                     </li>
-                    <li>
-                        <router-link to="/doc/tabs">Tabs 组件</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/doc/tabs">Tabs 组件</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/doc/tabs">Tabs 组件</router-link>
-                    </li>
                 </ol>
             </aside>
             <main>
@@ -43,6 +34,7 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
 
 <style lang="scss" scoped>
 .content{
+    width: 100%;
     display: flex;
     flex: 1;
     margin-top: 75px;
@@ -70,7 +62,11 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
         width: 100%;
         height: 100%;
         background-color: antiquewhite;
-        padding: 16px;
+        padding: 60px 180px;
+        overflow: auto;
+        @media (max-width:500px){
+            padding: 20px 8px;
+        }
     }
     @media (max-width: 500px) {
         position: fixed;

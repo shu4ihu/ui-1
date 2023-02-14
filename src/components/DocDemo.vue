@@ -1,5 +1,5 @@
 <template>
     <div>
-        switch文档
+        Doc 默认页面
     </div>
 </template>
