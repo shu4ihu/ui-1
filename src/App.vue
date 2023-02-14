@@ -1,9 +1,13 @@
 <script setup>
 import { ref, provide } from 'vue';
+import { router } from './router';
 
 const pageWidth = document.documentElement.clientWidth
 const asideVisible = ref(pageWidth <= 500 ? false : true)
 provide('asideVisible',asideVisible)
+router.afterEach(()=>{
+  if(pageWidth <= 500)  asideVisible.value = false
+})
 </script>
 
 <template>
