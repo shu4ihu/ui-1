@@ -45,10 +45,6 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
         width: 260px;
         height: auto;
         padding: 16px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
         overflow-x: hidden;
         overflow-y: scroll;
         border-right: 1px solid #e8e8e8;
@@ -65,6 +61,12 @@ const asideVisible = inject<Ref<boolean>>('asideVisible')
                 font-size: 14px;
             }
         }
+    }
+    @media (max-width: 500px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
     }
 }
 </style>

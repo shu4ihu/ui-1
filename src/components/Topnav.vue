@@ -1,7 +1,7 @@
 <template>
     <div class="top_nav">
         <a class="logo">
-            <div class="pic" @click="toggleMenu">UI</div>
+            <div class="pic">UI</div>
         </a>
         <ul class="menu">
             <li>
@@ -11,6 +11,7 @@
                 <a href="#/">GitHub</a>
             </li>
         </ul>
+        <span class="toggleAside"  @click="toggleMenu"></span>
     </div>
 </template>
 
@@ -34,6 +35,9 @@
         cursor: pointer;
         max-width: 6em;
         margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .pic{
             width: 38px;
             height: 38px;
@@ -54,6 +58,27 @@
             a{
                 color: inherit;
             }
+        }
+    }
+    .toggleAside{
+        display: none;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media (max-width:500px) {
+        .menu{
+            display: none;
+        }
+        .logo{
+            margin: 0 auto;
+        }
+        .toggleAside{
+            display: inline-block;
         }
     }
 }
